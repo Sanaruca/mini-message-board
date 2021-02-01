@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Send a new message 
+    a(href="/new") here!
+
+  h3 messages:
+  main.msgs
+    each object in messages
+      .m
+        each porperty, value in object
+          p(class=value)= porperty
+
